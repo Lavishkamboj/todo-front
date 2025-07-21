@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      const res = await fetch('http://localhost:8000/auth', {
+      const res = await fetch('https://todo-back-rho.vercel.app/auth', {
         method: 'GET',
         credentials: 'include',
       });

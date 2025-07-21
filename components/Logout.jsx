@@ -9,7 +9,7 @@ const LogoutPage = () => {
 
   const handleSubmit = () => {
     
-    fetch('http://localhost:8000/log-out', {
+    fetch('https://todo-back-rho.vercel.app/log-out', {
       method: 'GET',
       credentials: 'include',
     }).then((data) => {

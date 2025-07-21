@@ -16,7 +16,7 @@ const TodoPage = () => {
 useEffect(() => {
   const check_data = async () => {
     try {
-      const user_data = await fetch('http://localhost:8000/getUserData',{
+      const user_data = await fetch('https://todo-back-rho.vercel.app/getUserData',{
           method: 'GET',
   credentials: 'include',
       });
@@ -140,7 +140,7 @@ useEffect(() => {
    
     if (task.trim()) {
         //sending data to backened
-     const response = await fetch('http://localhost:8000/send_inputData', {
+     const response = await fetch('https://todo-back-rho.vercel.app/send_inputData', {
         method: 'POST',               // POST request
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({task}) , // send JSON data
@@ -161,7 +161,7 @@ useEffect(() => {
   };
 
   const handleDeleteTask = async(index) => {
- const response = await fetch('http://localhost:8000/deleteTask', {
+ const response = await fetch('https://todo-back-rho.vercel.app/deleteTask', {
         method: 'POST',               // POST request
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({index}) , // send JSON data
