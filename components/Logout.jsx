@@ -7,9 +7,9 @@ const LogoutPage = () => {
   const [hover, setHover] = useState(false);
   const { setUser, loading } = useContext(AuthContext);
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     
-    fetch('https://todo-back-rho.vercel.app/log-out', {
+    await fetch('https://todo-back-rho.vercel.app/log-out', {
       method: 'GET',
       credentials: 'include',
     }).then((data) => {
